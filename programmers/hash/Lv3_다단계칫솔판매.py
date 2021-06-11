@@ -2,7 +2,6 @@ import math
 
 
 def solution(enroll, referral, seller, amount):
-    answer = []
     relation_dict = {}
     money_dict = {}
     for i in range(len(enroll)):
