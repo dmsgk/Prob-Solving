@@ -1,20 +1,12 @@
 # 189. Rotate Array
-
-
 from typing import List
-from collections import deque
 
 
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
-        nums = deque(nums)
         for _ in range(k):
             n = nums.pop()
-            nums.appendleft(n)
-
-        nums = list(nums)
-        print(nums)
-
+            nums.insert(0, n)
         """
         Do not return anything, modify nums in-place instead.
         """
