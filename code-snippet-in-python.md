@@ -121,6 +121,7 @@ print(str)  # 1 2 3 4 출력
 
     ```python
     import collections
+    
     my_list = ["dance","classic", "pop", "classic", "classic", "pop"]
     my_counter = collections.Counter(my_list)
     my_counter   # Counter({'dance': 1, classic': 3, 'pop': 2})
@@ -144,7 +145,7 @@ print(str)  # 1 2 3 4 출력
     my_counter.most_common(1)[0][0]  # 'classic'
     
     # dict() 함수를 이용해 딕셔너리로 변환
-    dict(my_counter)   # {'classic': 3, 'pop': 2}
+    my_dict = dict(my_counter)   # {'classic': 3, 'pop': 2}
     ```
 
     
@@ -202,8 +203,7 @@ import operator
 dict = {"abcde" : 7, "fzowe" : 5, "fko" : 5}
 sortedArr = sorted(dict.items(), key=operator.itemgetter(1))
 
-print sortedArr
->>> [('fzowe', 5), ('fko', 5), ('abcde', 7)]
+print(sortedArr) #  [('fzowe', 5), ('fko', 5), ('abcde', 7)]
 ```
 
 ##### **value에 의한 정렬 -> key에 의한 정렬**
@@ -218,8 +218,7 @@ import operator
 dict = {"abcde" : 7, "fzowe" : 5, "fko" : 5}
 sortedArr = sorted(dict.items(), key=operator.itemgetter(1, 0))
 
-print sortedArr
->>> [('fko', 5), ('fzowe', 5), ('abcde', 7)]
+print(sortedArr)  # [('fko', 5), ('fzowe', 5), ('abcde', 7)]
 ```
 
 ##### **내림차순 정렬**
@@ -232,8 +231,7 @@ import operator
 dict = {"abcde" : 7, "fzowe" : 5, "fko" : 5}
 sortedArr = sorted(dict.items(), key=operator.itemgetter(1), reverse=True)
 
-print sorted
->>> [('abcde', 7), ('fzowe', 5), ('fko', 5)]
+print(sortedArr) # [('abcde', 7), ('fzowe', 5), ('fko', 5)]
 ```
 
 
@@ -277,15 +275,16 @@ result = re.sub(pattern='\W', repl=' ', string=paragraph).lower().split()
 
 # 이진 탐색 - bisect
 
-bisect는 이진 탐색 알고리즘을 구현한 파이썬 표준 라이브러리이다. `bisect.bisect` 함수는 정렬된 리스트에 값을 삽입할 때 정렬을 유지할 수 있는 인덱스를 리턴한다.
+- bisect는 이진 탐색 알고리즘을 구현한 파이썬 표준 라이브러리이다. `bisect.bisect` 함수는 정렬된 리스트에 값을 삽입할 때 정렬을 유지할 수 있는 인덱스를 리턴한다.
+- `bisect.insort(li, num)` 은 `li`에 `num`을 정렬된 위치에 맞도록 삽입
 
 
 
-```
->>> import bisect
->>> a = [60, 70, 80, 90]
->>> bisect.insort(a, 85)
->>> a
-[60, 70, 80, 85, 90]
+
+```python
+import bisect
+a = [60, 70, 80, 90]
+bisect.insort(a, 85)
+print(a)  # [60, 70, 80, 85, 90]
 ```
 
