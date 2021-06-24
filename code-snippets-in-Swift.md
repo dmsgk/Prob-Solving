@@ -58,7 +58,20 @@
   arr.sort(by: >) // 내림차순 // [9, 8, 7, 4, 3, 2, 1]
   ```
 
-- #### 
+- 슬라이싱
+
+  ```swift
+  var arr = [1, 5, 2, 6, 3, 7, 4]
+  type(of: arr[2...4]) //ArraySlice<Int>.Type
+  
+  // 2번째부터 5번째까지 잘라 Array 타입으로 변환하여 사용
+  var slicedArr = Array(arr[2...5])  //[2, 6, 3, 7]
+  print(slicedArr[0]) // 2
+  ```
+
+  
+
+- ㅇㅇ
 
 ## 문자열
 
