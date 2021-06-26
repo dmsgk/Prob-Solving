@@ -1,6 +1,6 @@
-# Swift Code Snippets for PS
+# [Swift] Code Snippets for PS
 
-알고리즘에 자주 사용되는 구문
+코테에 자주 사용되는 구문
 
 ## 반복문
 
@@ -114,6 +114,21 @@
   str.firstIndex(of: "c")
   ```
 
-  
+- dd
 
-- 
+
+
+## 딕셔너리
+
+- 파이썬과 다르게, 대괄호 `[ ]`를 이용한다. 
+
+
+
+## 고차함수
+
+`map`
+
+`filter`
+
+`reduce`
+
