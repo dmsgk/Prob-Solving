@@ -69,6 +69,12 @@
   print(slicedArr[0]) // 2
   ```
 
+- 크기가 정해진 빈 배열 생성
+
+  ```swift
+  let zeroArray = [Int](repeating: 0, count: 10) // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ```
+
   
 
 - ㅇㅇ
