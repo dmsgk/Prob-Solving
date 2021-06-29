@@ -234,6 +234,18 @@ sortedArr = sorted(dict.items(), key=operator.itemgetter(1), reverse=True)
 print(sortedArr) # [('abcde', 7), ('fzowe', 5), ('fko', 5)]
 ```
 
+### 4.2. collections.defaultdict
+
+key값이 없을 경우 미리 지정해놓은 초기값을 반환하는 딕셔너리. 
+
+```python
+import collections
+
+anagram_dict = collections.defaultdict(list)  # 키값 없는 경우 []반환
+anagram_dict[1]  # []
+anagram_dict[1].append(1)  # defaultdict(list, {1: [1]})
+```
+
 
 
 ## 5. 문자열
