@@ -9,15 +9,3 @@ class Solution:
         for num in nums:
             result ^= num
         return result
-
-
-
-
-nums = [1, 2, 3, 2, 1]
-
-result = 0
-for num in nums:
-    print("num: ", num, "result: ", result)
-    result^= num
-    print("result: ", result)
-    print()
