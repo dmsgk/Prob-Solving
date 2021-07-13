@@ -10,7 +10,7 @@ roads = [list(map(int, sys.stdin.readline().strip().split())) for _ in range(e)]
 graph = [[] for _ in range(v+1)]
 for r in roads:
     a,b,w = r
-    graph[a].append([b,w])
+    graph[a].append([b,w])  # 도착 간선, 가중치 저장
 
 
 def dijkstra(distance, k, visited, graph):
@@ -19,7 +19,7 @@ def dijkstra(distance, k, visited, graph):
     heapq.heappush(q, (distance[k], k))
     while q:
         dist, curr_node = heapq.heappop(q)
-        if visited[curr_node]:
+        if visited[curr_node]:  # 방문한 노드인 경우
             continue
 
         visited[curr_node] = True
@@ -31,7 +31,7 @@ def dijkstra(distance, k, visited, graph):
 
 visited = [False] * (v+1)
 distance = dijkstra(distance, k, visited, graph)
-print(distance)
+
 for i in range(1,v+1):
     if distance[i] < sys.maxsize:
         print(distance[i])
