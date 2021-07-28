@@ -1,4 +1,5 @@
 # 댄스 파티
+#
 import sys
 
 ans = 0
